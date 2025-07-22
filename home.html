@@ -12,7 +12,9 @@
 <body>
     <!--Header-->
     <header>
-        <div class="logo">LOGO ACÁ</div>
+        <div class="logo">
+            <img src="images/FinoLogo.webp" alt="Logo">
+        </div>
         <nav class="nav-pc">
             <ul>
                 <li><a href="#section1">Sección 1</a></li>
@@ -26,20 +28,32 @@
     <!--Hero Carousel (non-working)-->
     <section id="hero" class="carousel">
         <div class="slide active">
-            <h1>EICH WAN</h1>
-            <button>Ver Productos</button>
+            <img src="images/Fino1.webp" alt="Hero placeholder">
+            <div class="text-overlay left">
+                <h1>Bienvenidos a Punto CAT</h1>
+                <button>Ver Productos</button>
+            </div>
         </div>
         <div class="slide">
-            <p>Quiénes somos</p>
-            <button>Click</button>
+            <img src="images/Fino2.webp" alt="Hero placeholder">
+            <div class="text-overlay right">
+                <p>Ventas por mayor</p>
+                <button>Click</button>
+            </div>
         </div>
         <div class="slide">
-            <p>Compra fácil y rápido</p>
-            <button>Click</button>
+            <img src="images/Fino3.webp" alt="Hero placeholder">
+            <div class="text-overlay right">
+                <p>Promos y Ofertas</p>
+                <button>Click</button>
+            </div>
         </div>
         <div class="slide">
-            <p>Contactanos vía WhatsApp</p>
-            <button onclick="showPreview()">Click</button>
+            <img src="images/Fino4.webp" alt="Hero placeholder">
+            <div class="text-overlay left">
+                <p>Quiénes somos</p>
+                <button onclick="showPreview()">Click</button>
+            </div>
         </div>
         <div class="carousel-dots">
             <span class="dot active"></span>
@@ -57,11 +71,12 @@
                 <div class="card" data-product="Figura Dragon 3D">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Dragon">
+                            <img src="images/Fino5.webp" alt="Dragon">
                         </div>
                         <div class="card-back">
                             <h3>Figura Dragon</h3>
                             <p>$1200 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -70,11 +85,12 @@
                 <div class="card" data-product="Llavero personalizado">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Llavero">
+                            <img src="images/Fino5.webp" alt="Llavero">
                         </div>
                         <div class="card-back">
                             <h3>Llavero personalizado</h3>
                             <p>$500 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -83,11 +99,12 @@
                 <div class="card" data-product="Soporte Celular">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Soporte">
+                            <img src="images/Fino5.webp" alt="Soporte">
                         </div>
                         <div class="card-back">
                             <h3>Soporte Celular</h3>
                             <p>$800 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -96,11 +113,12 @@
                 <div class="card" data-product="Maceta Pequeña">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Maceta">
+                            <img src="images/Fino5.webp" alt="Maceta">
                         </div>
                         <div class="card-back">
                             <h3>Maceta Pequeña</h3>
                             <p>$700 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -109,11 +127,12 @@
                 <div class="card" data-product="Lapicero 3D">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Lapicero">
+                            <img src="images/Fino5.webp" alt="Lapicero">
                         </div>
                         <div class="card-back">
                             <h3>Lapicero 3D</h3>
                             <p>$600 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -122,11 +141,12 @@
                 <div class="card" data-product="Figura Rafino I">
                     <div class="card-inner">
                         <div class="card-front">
-                            <img src="#" alt="Rafino I">
+                            <img src="images/Fino5.webp" alt="Rafino I">
                         </div>
                         <div class="card-back">
                             <h3>FIgura Rafino I</h3>
                             <p>$1000 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
                         </div>
                     </div>
@@ -136,28 +156,196 @@
 
         <section id="section2">
             <h2>Sección 2</h2>
-            <div class="card-grid" id="cards2"></div>
+            <div class="card-grid">
+                <div class="card" data-product="Figura Dragon 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Dragon">
+                        </div>
+                        <div class="card-back">
+                            <h3>Figura Dragon</h3>
+                            <p>$1200 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Llavero personalizado">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Llavero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Llavero personalizado</h3>
+                            <p>$500 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Soporte Celular">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Soporte">
+                        </div>
+                        <div class="card-back">
+                            <h3>Soporte Celular</h3>
+                            <p>$800 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Maceta Pequeña">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Maceta">
+                        </div>
+                        <div class="card-back">
+                            <h3>Maceta Pequeña</h3>
+                            <p>$700 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Lapicero 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Lapicero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Lapicero 3D</h3>
+                            <p>$600 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Figura Rafino I">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Rafino I">
+                        </div>
+                        <div class="card-back">
+                            <h3>FIgura Rafino I</h3>
+                            <p>$1000 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="section3">
             <h2>Sección 3</h2>
-            <div class="card-grid" id="cards3"></div>
+            <div class="card-grid">
+                <div class="card" data-product="Figura Dragon 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Dragon">
+                        </div>
+                        <div class="card-back">
+                            <h3>Figura Dragon</h3>
+                            <p>$1200 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Llavero personalizado">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Llavero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Llavero personalizado</h3>
+                            <p>$500 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Soporte Celular">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Soporte">
+                        </div>
+                        <div class="card-back">
+                            <h3>Soporte Celular</h3>
+                            <p>$800 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Maceta Pequeña">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Maceta">
+                        </div>
+                        <div class="card-back">
+                            <h3>Maceta Pequeña</h3>
+                            <p>$700 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Lapicero 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Lapicero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Lapicero 3D</h3>
+                            <p>$600 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Figura Rafino I">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="images/Fino5.webp" alt="Rafino I">
+                        </div>
+                        <div class="card-back">
+                            <h3>FIgura Rafino I</h3>
+                            <p>$1000 ARS</p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!--WhatsApp Button & Modal-->
+        <!--WhatsApp Button & Modal (next in line)-->
         <div id="whatsapp-button" onclick="showPreview()">📩</div>
     </main>
 
-    <!--Footer-->
+    <!--Footer (later)-->
     <footer id="footer">
         <div class="socials">
             <a href="#"><img src="facebook-placeholder.png" alt="Facebook"></a>
             <a href="#"><img src="instagram-placeholder.png" alt="Instagram"></a>
         </div>
-        <p>&copy; <span id="year"></span> Nombre de la empresa </p>
+        <p>&copy; <span id="year"></span> Punto CAT </p>
     </footer>
 
-    <!--Preview User Cart-->
+    <!--Preview User Cart (work on this after wppbtn)-->
     <div id="previewModal" class="modal">
         <div class="modal-content">
             <h3>Tu Consulta</h3>
@@ -166,6 +354,7 @@
         </div>
     </div>
 
+    <script src="scripts/carousel.js"></script>
     <script src="scripts/flipcardtest.js"></script>
     <script src="scripts/datetime.js"></script>
 </body>

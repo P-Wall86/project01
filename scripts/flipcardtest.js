@@ -34,7 +34,7 @@ const selectedProducts = new Set();
         function sendWhatsApp() {
             if (selectedProducts.size === 0) return;
             const message = encodeURIComponent("Hola! Estoy interesad@ en los siguientes productos: \n- " + Array.from(selectedProducts).join("\n- "));
-            const whatsappNumber = '5493764271532';
+            const whatsappNumber = '5491124834551';
             window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
             document.getElementById('previewModal').style.display = 'none';
         }
