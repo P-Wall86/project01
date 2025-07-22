@@ -1,11 +1,175 @@
 <!DOCTYPE html>
-<html lang="eng-US">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Página de Productos</title>
+
+    <link rel="stylesheet" href="styles/home.css">
 </head>
+
 <body>
-    <a href="flipcardstest.html">Test</a>
+    <!--Header-->
+    <header>
+        <div class="logo">LOGO</div>
+        <nav class="nav-pc">
+            <ul>
+                <li><a href="#section1">Sección 1</a></li>
+                <li><a href="#section2">Sección 2</a></li>
+                <li><a href="#section3">Sección 3</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">☰</div>
+    </header>
+
+    <!--Hero Carousel-->
+    <section id="hero" class="carousel">
+        <div class="slide active">
+            <h1>EICH WAN</h1>
+            <button>Ver Productos</button>
+        </div>
+        <div class="slide">
+            <p>Quiénes somos</p>
+            <button>Click</button>
+        </div>
+        <div class="slide">
+            <p>Compra fácil y rápido</p>
+            <button>Click</button>
+        </div>
+        <div class="slide">
+            <p>Contactanos vía WhatsApp</p>
+            <button onclick="showPreview()">Click</button>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!--Product Sections-->
+    <main>
+        <section id="section1">
+            <h2>Sección 1</h2>
+            <div class="card-grid">
+                <div class="card" data-product="Figura Dragon 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Dragon">
+                        </div>
+                        <div class="card-back">
+                            <h3>Figura Dragon</h3>
+                            <p>$1200 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Llavero personalizado">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Llavero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Llavero personalizado</h3>
+                            <p>$500 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Soporte Celular">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Soporte">
+                        </div>
+                        <div class="card-back">
+                            <h3>Soporte Celular</h3>
+                            <p>$800 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Maceta Pequeña">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Maceta">
+                        </div>
+                        <div class="card-back">
+                            <h3>Maceta Pequeña</h3>
+                            <p>$700 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Lapicero 3D">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Lapicero">
+                        </div>
+                        <div class="card-back">
+                            <h3>Lapicero 3D</h3>
+                            <p>$600 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-product="Figura Rafino I">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="#" alt="Rafino I">
+                        </div>
+                        <div class="card-back">
+                            <h3>FIgura Rafino I</h3>
+                            <p>$1000 ARS</p>
+                            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h2>Sección 2</h2>
+            <div class="card-grid" id="cards2"></div>
+        </section>
+
+        <section id="section3">
+            <h2>Sección 3</h2>
+            <div class="card-grid" id="cards3"></div>
+        </section>
+
+        <!--WhatsApp Button & Modal-->
+        <div id="whatsapp-button" onclick="showPreview()">📩</div>
+    </main>
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="socials">
+            <a href="#"><img src="facebook-placeholder.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-placeholder.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; <span id="year"></span> Nombre de la empresa </p>
+    </footer>
+
+    <!--Preview User Cart-->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <h3>Tu Consulta</h3>
+            <ul id="selectedList"></ul>
+            <button onclick="sendWhatsApp()">Enviar por WhatsApp</button>
+        </div>
+    </div>
+
+    <script src="scripts/flipcardtest.js"></script>
+    <script src="scripts/datetime.js"></script>
 </body>
+
 </html>
