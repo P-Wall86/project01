@@ -1,0 +1,182 @@
+[
+    {
+        "id": "figura-dragon-3d",
+        "name": "Figura Dragon",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Dragon",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "figura-dragon-3d",
+        "name": "Figura Dragon",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Dragon",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "figura-dragon-3d",
+        "name": "Figura Dragon",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Dragon",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero-personalizado",
+        "name": "Llavero personalizado",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Llavero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero-personalizado",
+        "name": "Llavero personalizado",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Llavero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero-personalizado",
+        "name": "Llavero personalizado",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Llavero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "soporte-celular",
+        "name": "Soporte Celular",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Soporte",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "soporte-celular",
+        "name": "Soporte Celular",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Soporte",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "soporte-celular",
+        "name": "Soporte Celular",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Soporte",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "maceta-pequena",
+        "name": "Maceta Pequeña",
+        "price": 700,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Maceta",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "maceta-pequena",
+        "name": "Maceta Pequeña",
+        "price": 700,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Maceta",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "maceta-pequena",
+        "name": "Maceta Pequeña",
+        "price": 700,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Maceta",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "lapicero-3d",
+        "name": "Lapicero 3D",
+        "price": 600,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Lapicero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "lapicero-3d",
+        "name": "Lapicero 3D",
+        "price": 600,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Lapicero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "lapicero-3d",
+        "name": "Lapicero 3D",
+        "price": 600,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Lapicero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "figura-rafino-i",
+        "name": "Figura Rafino I",
+        "price": 1000,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/Fino5.webp",
+        "alt": "Rafino I",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "figura-rafino-i",
+        "name": "Figura Rafino I",
+        "price": 1000,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "images/Fino5.webp",
+        "alt": "Rafino I",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "figura-rafino-i",
+        "name": "Figura Rafino I",
+        "price": 1000,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/Fino5.webp",
+        "alt": "Rafino I",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]
