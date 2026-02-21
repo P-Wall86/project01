@@ -331,6 +331,13 @@ footer {
     background-color: #555;
 }
 
+/* FOOTER */
+.social-icon {
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+}
+
 /* RESPONSIVE MEDIA */
 @media (max-width: 768px) {
     .slide {

@@ -1,162 +1,72 @@
 [
     {
-        "id": "figura-dragon-3d",
-        "name": "Figura Dragon",
+        "id": "mate1",
+        "name": "Mate Colores",
         "price": 1200,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Dragon",
+        "image": "images/products/Mate1.webp",
+        "alt": "mate violeta",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-        "id": "figura-dragon-3d",
-        "name": "Figura Dragon",
+        "id": "mate2",
+        "name": "Mate Potter",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/products/Mate2.webp",
+        "alt": "mate potter",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mate3",
+        "name": "Mate Groot",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/products/Mate3.webp",
+        "alt": "mate groot",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mates1",
+        "name": "Mates Animales",
+        "price": 700,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/products/Mates1.webp",
+        "alt": "mates",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mates2",
+        "name": "Mates Feliz Día",
+        "price": 600,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "images/products/Mates2.webp",
+        "alt": "mates feliz día",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero1",
+        "name": "Llavero Cumpleaños",
         "price": 1200,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Dragon",
+        "image": "images/products/Llavero1.webp",
+        "alt": "llavero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-        "id": "figura-dragon-3d",
-        "name": "Figura Dragon",
-        "price": 1200,
-        "currency": "ARS",
-        "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Dragon",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "llavero-personalizado",
-        "name": "Llavero personalizado",
-        "price": 500,
-        "currency": "ARS",
-        "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Llavero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "llavero-personalizado",
-        "name": "Llavero personalizado",
+        "id": "llavero2",
+        "name": "Llavero Capibara Mundial",
         "price": 500,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Llavero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "llavero-personalizado",
-        "name": "Llavero personalizado",
-        "price": 500,
-        "currency": "ARS",
-        "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Llavero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "soporte-celular",
-        "name": "Soporte Celular",
-        "price": 800,
-        "currency": "ARS",
-        "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Soporte",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "soporte-celular",
-        "name": "Soporte Celular",
-        "price": 800,
-        "currency": "ARS",
-        "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Soporte",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "soporte-celular",
-        "name": "Soporte Celular",
-        "price": 800,
-        "currency": "ARS",
-        "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Soporte",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "maceta-pequena",
-        "name": "Maceta Pequeña",
-        "price": 700,
-        "currency": "ARS",
-        "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Maceta",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "maceta-pequena",
-        "name": "Maceta Pequeña",
-        "price": 700,
-        "currency": "ARS",
-        "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Maceta",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "maceta-pequena",
-        "name": "Maceta Pequeña",
-        "price": 700,
-        "currency": "ARS",
-        "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Maceta",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "lapicero-3d",
-        "name": "Lapicero 3D",
-        "price": 600,
-        "currency": "ARS",
-        "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Lapicero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "lapicero-3d",
-        "name": "Lapicero 3D",
-        "price": 600,
-        "currency": "ARS",
-        "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Lapicero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "lapicero-3d",
-        "name": "Lapicero 3D",
-        "price": 600,
-        "currency": "ARS",
-        "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Lapicero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "id": "figura-rafino-i",
-        "name": "Figura Rafino I",
-        "price": 1000,
-        "currency": "ARS",
-        "category": "section1",
-        "image": "images/products/Fino5.webp",
-        "alt": "Rafino I",
+        "image": "images/products/Llavero2.webp",
+        "alt": "llavero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
@@ -170,13 +80,33 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-        "id": "figura-rafino-i",
-        "name": "Figura Rafino I",
-        "price": 1000,
+        "id": "insignias1",
+        "name": "Insignias SPP",
+        "price": 1200,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/products/Fino5.webp",
-        "alt": "Rafino I",
+        "image": "images/products/Insignias1.webp",
+        "alt": "insignias",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "xmas1",
+        "name": "Globo Navidad",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/products/Xmas1.webp",
+        "alt": "globo navidad",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "xmas2",
+        "name": "Pesebre Minimalista",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "images/products/Xmas2.webp",
+        "alt": "pesebre",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
 ]
