@@ -39,7 +39,7 @@ function showPreview() {
     const list = document.getElementById('selectedList');
     list.innerHTML = '';
     if (selectedProducts.size === 0) {
-        list.innerHTML = '<li>No seleccionaste nada todavía.</li>';
+        list.innerHTML = '<li>Selecciona un producto.</li>';
     } else {
         selectedProducts.forEach(p => {
             const li = document.createElement('li');

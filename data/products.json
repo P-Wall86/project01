@@ -5,7 +5,7 @@
         "price": 1200,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Dragon",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -15,7 +15,7 @@
         "price": 1200,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Dragon",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -25,7 +25,7 @@
         "price": 1200,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Dragon",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -35,7 +35,7 @@
         "price": 500,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Llavero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -45,7 +45,7 @@
         "price": 500,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Llavero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -55,7 +55,7 @@
         "price": 500,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Llavero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -65,7 +65,7 @@
         "price": 800,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Soporte",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -75,7 +75,7 @@
         "price": 800,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Soporte",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -85,7 +85,7 @@
         "price": 800,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Soporte",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -95,7 +95,7 @@
         "price": 700,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Maceta",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -105,7 +105,7 @@
         "price": 700,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Maceta",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -115,7 +115,7 @@
         "price": 700,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Maceta",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -125,7 +125,7 @@
         "price": 600,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Lapicero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -135,7 +135,7 @@
         "price": 600,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Lapicero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -145,7 +145,7 @@
         "price": 600,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Lapicero",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -155,7 +155,7 @@
         "price": 1000,
         "currency": "ARS",
         "category": "section1",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Rafino I",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -165,7 +165,7 @@
         "price": 1000,
         "currency": "ARS",
         "category": "section2",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Rafino I",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
@@ -175,7 +175,7 @@
         "price": 1000,
         "currency": "ARS",
         "category": "section3",
-        "image": "images/Fino5.webp",
+        "image": "images/products/Fino5.webp",
         "alt": "Rafino I",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     }
