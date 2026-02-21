@@ -17,6 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Burger menu
+const burger = document.querySelector('.burger-menu');
+const mobileNav = document.querySelector('.mobile-nav');
+
+burger.addEventListener('click', () => {
+    if (mobileNav.style.display === 'flex') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'flex';
+        mobileNav.style.flexDirection = 'column';
+    }
+});
+
+// Product selection
 const selectedProducts = new Set();
 
 function toggleSelection(event, btn) {
@@ -35,6 +49,7 @@ function toggleSelection(event, btn) {
     }
 }
 
+// Modal selection
 function showPreview() {
     const list = document.getElementById('selectedList');
     list.innerHTML = '';
