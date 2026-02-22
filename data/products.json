@@ -70,16 +70,6 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
-        "id": "figura-rafino-i",
-        "name": "Figura Rafino I",
-        "price": 1000,
-        "currency": "ARS",
-        "category": "section2",
-        "image": "images/products/Fino5.webp",
-        "alt": "Rafino I",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
         "id": "insignias1",
         "name": "Insignias SPP",
         "price": 1200,

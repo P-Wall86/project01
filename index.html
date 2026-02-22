@@ -14,7 +14,9 @@
     <!--Header-->
     <header>
         <div class="logo">
-            <img src="images/logo/Logo.webp" alt="Logo">
+            <a href="index.html">
+                <img src="images/logo/Logo.webp" alt="Logo">
+            </a>
         </div>
         <h1>Punto BAT 3D</h1>
         <nav class="nav-pc">
@@ -28,17 +30,16 @@
     </header>
 
     <nav class="mobile-nav">
-    <ul>
-        <li><a href="#section1">Mates</a></li>
-        <li><a href="#section2">Llaveros</a></li>
-        <li><a href="#section3">Adornos</a></li>
-    </ul>
-</nav>
+        <ul>
+            <li><a href="#section1">Mates</a></li>
+            <li><a href="#section2">Llaveros</a></li>
+            <li><a href="#section3">Adornos</a></li>
+        </ul>
+    </nav>
 
     <div class="mobile-intro">
         <p class="tagline">Personalizamos ideas. Fabricamos proyectos.</p>
         <p class="subtitle">Creamos productos únicos a pedido.</p>
-        <h2 class="mobile-products-title">Nuestros productos</h2>
     </div>
 
     <!--Hero Carousel-->
@@ -47,37 +48,28 @@
             <img src="images/hero/Fino1.webp" alt="Hero placeholder">
             <div class="text-overlay left">
                 <p>Personalizamos ideas</p>
-                <button>Click</button>
             </div>
         </div>
         <div class="slide">
             <img src="images/hero/Fino2.webp" alt="Hero placeholder">
             <div class="text-overlay right">
                 <p>Diseñamos tus proyectos</p>
-                <button>Click</button>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="images/hero/Fino3.webp" alt="Hero placeholder">
-            <div class="text-overlay right">
-                <p>Ventas por mayor</p>
-                <button>Click</button>
             </div>
         </div>
         <div class="slide">
             <img src="images/hero/Fino4.webp" alt="Hero placeholder">
-            <div class="text-overlay left">
-                <p>Quiénes somos</p>
-                <button>Click</button>
+            <div class="text-overlay right">
+                <p>Ventas por mayor</p>
             </div>
         </div>
         <div class="carousel-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
-            <span class="dot"></span>
         </div>
     </section>
+
+    <h2 class="products-title">Nuestros productos</h2>
 
     <!--Product Sections-->
     <main>
@@ -96,7 +88,15 @@
             <div class="card-grid"></div>
         </section>
 
-        <!--WhatsApp Button & Modal (next in line)-->
+        <div class="modal">
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <p id="modal-price"></p>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+
+        <!--WhatsApp Button & Modal-->
         <div id="whatsapp-button">📩</div>
     </main>
 
@@ -111,6 +111,8 @@
         </div>
         <p>&copy;<span id="year"></span> Punto BAT </p>
     </footer>
+
+    <button id="backToTop" title="Volver arriba">↑</button>
 
     <!--Preview User Cart-->
     <div id="previewModal" class="modal">

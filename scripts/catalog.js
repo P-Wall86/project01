@@ -1,3 +1,4 @@
+//Fetch Catalog
 document.addEventListener("DOMContentLoaded", () => {
     fetch("./data/products.json")
         .then(res => res.json())
@@ -5,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(err => console.error("Error cargando productos:", err));
 });
 
+//Render Catalog
 function renderCatalog(products) {
     const sections = document.querySelectorAll("section[id^='section']");
 
@@ -23,18 +25,12 @@ function renderCatalog(products) {
             wrapper.dataset.product = product.name;
 
             wrapper.innerHTML = `
-        <div class="card-inner">
-        <div class="card-front">
             <img src="${product.image}" alt="${product.alt}">
-        </div>
-        <div class="card-back">
-            <h3>${product.name}</h3>
-            <p>$${product.price} ${product.currency}</p>
-            <p class="desc">${product.description}</p>
-            <button onclick="toggleSelection(event, this)">Agregar a consulta</button>
-        </div>
-        </div>
-    `;
+            <div class="card-info">
+                <h3>${product.name}</h3>
+                <button class="view-detail" data-product="${product.id}">Ver detalle</button>
+            </div>
+            `;
 
             fragment.appendChild(wrapper);
         });
@@ -42,3 +38,75 @@ function renderCatalog(products) {
         container.appendChild(fragment);
     });
 }
+
+// Modal Details
+const modal = document.querySelector('.modal');
+const modalTitle = document.getElementById('modal-title');
+const modalPrice = document.getElementById('modal-price');
+const modalDesc = document.getElementById('modal-desc');
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('view-detail')) {
+        const productId = e.target.dataset.product;
+        const card = e.target.closest('.card');
+        
+        fetch('./data/products.json')
+            .then(res => res.json())
+            .then(products => {
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    modalTitle.textContent = product.name;
+                    modalPrice.textContent = `$${product.price} ${product.currency}`;
+                    modalDesc.textContent = product.description;
+                    
+                    let modalButton = document.getElementById('modal-action');
+                    if (!modalButton) {
+                        modalButton = document.createElement('button');
+                        modalButton.id = 'modal-action';
+                        modalButton.style.marginTop = '15px';
+                        modalButton.addEventListener('click', (ev) => toggleSelection(ev, modalButton));
+                        modal.querySelector('.modal-content').appendChild(modalButton);
+                    }
+
+                    modalButton.closestCard = card;
+
+                    if (card.classList.contains('selected')) {
+                        modalButton.textContent = 'Quitar de consulta';
+                    } else {
+                        modalButton.textContent = 'Agregar a consulta';
+                    }
+
+                    modal.style.display = 'flex';
+                }
+            });
+    }
+});
+
+// Modal Product Selection
+function toggleSelection(event, btn) {
+    event.stopPropagation();
+    const card = btn.closestCard || btn.closest('.card');
+    const product = card.dataset.product;
+
+    if (selectedProducts.has(product)) {
+        selectedProducts.delete(product);
+        card.classList.remove('selected');
+        btn.textContent = 'Agregar a consulta';
+    } else {
+        selectedProducts.add(product);
+        card.classList.add('selected');
+        btn.textContent = 'Quitar de consulta';
+    }
+
+    if (btn.id === 'modal-action') {
+        if (card.classList.contains('selected')) {
+            btn.textContent = 'Quitar de consulta';
+        } else {
+            btn.textContent = 'Agregar a consulta';
+        }
+    }
+}
+
+modal.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+});

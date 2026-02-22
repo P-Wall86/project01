@@ -65,7 +65,7 @@ function showPreview() {
     document.getElementById('previewModal').style.display = 'flex';
 }
 
-//Send WhatsApp msg
+// Send WhatsApp msg
 function sendWhatsApp() {
     if (selectedProducts.size === 0) return;
     const message = encodeURIComponent(
@@ -76,3 +76,23 @@ function sendWhatsApp() {
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
     document.getElementById('previewModal').style.display = 'none';
 }
+
+// Back to Top
+const backToTopBtn = document.getElementById("backToTop");
+
+backToTopBtn.style.display = "none";
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 600) {
+        backToTopBtn.style.display = "flex";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
