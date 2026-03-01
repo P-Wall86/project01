@@ -82,6 +82,17 @@ document.addEventListener('click', (e) => {
     }
 });
 
+//Updated WhatsApp Button
+const whatsappButton = document.getElementById('whatsapp-button');
+
+function updateWhatsappState(){
+    if (selectedProducts.size > 0) {
+        whatsappButton.classList.add('active');
+    } else {
+        whatsappButton.classList.remove('active');
+    }
+}
+
 // Modal Product Selection
 function toggleSelection(event, btn) {
     event.stopPropagation();
@@ -105,8 +116,17 @@ function toggleSelection(event, btn) {
             btn.textContent = 'Agregar a consulta';
         }
     }
+
+    updateWhatsappState();
 }
 
 modal.addEventListener('click', e => {
     if (e.target === modal) modal.style.display = 'none';
+});
+
+//ESC Key Modal Closer
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+        modal.style.display = 'none';
+    }
 });
