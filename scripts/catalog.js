@@ -130,3 +130,10 @@ document.addEventListener('keydown', (e) => {
         modal.style.display = 'none';
     }
 });
+
+// X Modal Closer
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-close')) {
+        modal.style.display = 'none';
+    }
+});

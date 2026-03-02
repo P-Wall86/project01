@@ -53,17 +53,40 @@ function toggleSelection(event, btn) {
 function showPreview() {
     const list = document.getElementById('selectedList');
     list.innerHTML = '';
+
     if (selectedProducts.size === 0) {
         list.innerHTML = '<li>Selecciona un producto.</li>';
     } else {
         selectedProducts.forEach(p => {
             const li = document.createElement('li');
-            li.textContent = p;
+            li.innerHTML = `
+                <span>${p}</span>
+                <button class="remove-item" data-product="${p}">×</button>
+            `;
             list.appendChild(li);
         });
     }
+
     document.getElementById('previewModal').style.display = 'flex';
 }
+
+//Remove selection
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-item')) {
+        const product = e.target.dataset.product;
+
+        selectedProducts.delete(product);
+
+        const card = document.querySelector(`.card[data-product="${product}"]`);
+        if (card) {
+            card.classList.remove('selected');
+        }
+
+        updateWhatsappState();
+
+        showPreview();
+    }
+});
 
 // Send WhatsApp msg
 function sendWhatsApp() {
