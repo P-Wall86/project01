@@ -1,18 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Year update
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Hero slides & Whatsapp button
-    document.querySelectorAll("#whatsapp-button, #hero .slide:last-child button")
+    document
+        .querySelectorAll("#whatsapp-button, #hero .slide:last-child button")
         .forEach(btn => btn.addEventListener("click", showPreview));
 
-    const sendBtn = document.querySelector("#previewModal button");
-    sendBtn.addEventListener("click", sendWhatsApp);
+    const previewModal = document.getElementById("previewModal");
+    const closeBtn = previewModal.querySelector(".modal-close");
+    const sendBtn = previewModal.querySelector("#sendWhatsappBtn");
 
-    // Close modal
-    document.getElementById('previewModal').addEventListener('click', (e) => {
-        if (e.target.id === 'previewModal') {
-            document.getElementById('previewModal').style.display = 'none';
+    if (sendBtn) {
+        sendBtn.addEventListener("click", sendWhatsApp);
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            previewModal.style.display = "none";
+        });
+    }
+
+    //Click outside
+    previewModal.addEventListener("click", (e) => {
+        if (e.target === previewModal) {
+            previewModal.style.display = "none";
+        }
+    });
+
+    //ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            previewModal.style.display = "none";
         }
     });
 });
@@ -31,23 +48,7 @@ burger.addEventListener('click', () => {
 });
 
 // Product selection
-const selectedProducts = new Set();
-
-function toggleSelection(event, btn) {
-    event.stopPropagation();
-    const card = btn.closest('.card');
-    const product = card.dataset.product;
-
-    if (selectedProducts.has(product)) {
-        selectedProducts.delete(product);
-        card.classList.remove('selected');
-        btn.textContent = 'Agregar a consulta';
-    } else {
-        selectedProducts.add(product);
-        card.classList.add('selected');
-        btn.textContent = 'Quitar de consulta';
-    }
-}
+window.selectedProducts = new Set();
 
 // Modal selection
 function showPreview() {
@@ -92,7 +93,7 @@ document.addEventListener('click', (e) => {
 function sendWhatsApp() {
     if (selectedProducts.size === 0) return;
     const message = encodeURIComponent(
-        "Hola! Estoy interesad@ en los siguientes productos: \n- " + 
+        "Hola! Estoy interesad@ en los siguientes productos: \n- " +
         Array.from(selectedProducts).join("\n- ")
     );
     const whatsappNumber = '5491124834551';

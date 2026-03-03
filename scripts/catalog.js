@@ -49,7 +49,7 @@ document.addEventListener('click', (e) => {
     if (e.target.classList.contains('view-detail')) {
         const productId = e.target.dataset.product;
         const card = e.target.closest('.card');
-        
+
         fetch('./data/products.json')
             .then(res => res.json())
             .then(products => {
@@ -58,7 +58,7 @@ document.addEventListener('click', (e) => {
                     modalTitle.textContent = product.name;
                     modalPrice.textContent = `$${product.price} ${product.currency}`;
                     modalDesc.textContent = product.description;
-                    
+
                     let modalButton = document.getElementById('modal-action');
                     if (!modalButton) {
                         modalButton = document.createElement('button');
@@ -85,7 +85,10 @@ document.addEventListener('click', (e) => {
 //Updated WhatsApp Button
 const whatsappButton = document.getElementById('whatsapp-button');
 
-function updateWhatsappState(){
+function updateWhatsappState() {
+    const whatsappButton = document.getElementById('whatsapp-button');
+    if (!whatsappButton) return;
+
     if (selectedProducts.size > 0) {
         whatsappButton.classList.add('active');
     } else {

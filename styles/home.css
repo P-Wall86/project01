@@ -11,48 +11,81 @@ body {
     color: #e2e8f0;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* HEADER */
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 40px 20px;
     background-color: #0F172A;
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-header .logo {
-    position: absolute;
-    left: 20px;
-}
-
-header .nav-pc {
-    position: absolute;
-    right: 20px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
 }
 
+.logo {
+    flex: 0 0 auto;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.nav-pc {
+    flex: 0 0 auto;
+}
+
 .nav-pc ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-pc a {
     color: white;
     text-decoration: none;
+    font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+    transition: opacity 0.2s ease;
 }
 
-.nav-pc a:hover {
-    color: #2CB7C9;
+.nav-pc a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #2CB7C9;
+    transition: width 0.3s ease;
+}
+
+.nav-pc a:hover::after {
+    width: 100%;
 }
 
 .burger-menu {
@@ -110,46 +143,15 @@ header .nav-pc {
     object-fit: cover;
 }
 
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-    max-width: 80%;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
+.slide-text {
+    position: relative;
     z-index: 2;
-}
 
-.text-overlay.left {
-    left: 20px;
-    text-align: left;
-}
-
-.text-overlay.right {
-    right: 20px;
-    text-align: right;
-}
-
-.text-overlay h1,
-.text-overlay p {
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.text-overlay button {
-    background-color: #F2C94C;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.text-overlay button:hover {
-    background-color: #555;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .carousel-dots {
@@ -337,13 +339,60 @@ section h2::after {
 footer {
     background: #0F172A;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.socials img {
-    width: 24px;
-    margin: 0 10px;
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.footer-brand p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-socials p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+}
+
+.social-icons img {
+    width: 26px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
 
 /* MODAL */
@@ -467,7 +516,7 @@ footer {
     text-align: left;
 }
 
-#previewModal button {
+#sendWhatsappBtn {
     background-color: #F2C94C;
     color: #0F172A;
     border: none;
@@ -478,7 +527,7 @@ footer {
     font-weight: 600;
 }
 
-#previewModal button:hover {
+#sendWhatsappBtn:hover {
     background-color: #e6b93f;
     transform: translateY(-2px);
 }
@@ -493,21 +542,14 @@ footer {
 .remove-item {
     background: transparent;
     border: none;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
-    color: #F4A261;
+    color: #dc2626;
     transition: 0.2s ease;
 }
 
 .remove-item:hover {
     color: #2CB7C9;
-}
-
-/* FOOTER */
-.social-icon {
-    width: 28px;
-    height: 28px;
-    filter: invert(1);
 }
 
 /* BACK TO TOP ARROW */
@@ -560,6 +602,7 @@ footer {
 
     header h1 {
         margin: 0 auto;
+        text-align: center;
     }
 
     .logo {
@@ -582,23 +625,6 @@ footer {
     .card-info {
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .text-overlay {
-        max-width: 80%;
-        font-size: 0.95rem;
-        padding: 12px;
-    }
-
-    .text-overlay button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-
-    .slide .text-overlay {
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        text-align: center;
     }
 
     .carousel-dots {
@@ -646,29 +672,48 @@ footer {
 @media (max-width: 820px) and (min-width: 600px) {
 
     /* Header */
-    header {
+    header .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 40px 20px;
+        min-height: 80px;
+        padding: 10px 20px;
+    }
+
+    .logo {
+        flex: 0 0 auto;
+        z-index: 2;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 65px;
+        display: block;
     }
 
     header h1 {
-        text-align: center;
-        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.3rem;
         margin: 0;
-        font-size: 1.1rem;
+        text-align: center;
+        max-width: 50%;
+        z-index: 1;
+        pointer-events: none;
     }
 
     .burger-menu {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 24px;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        font-size: 28px;
         display: block;
         cursor: pointer;
+        z-index: 2;
+        flex: 0 0 auto;
     }
 
     .nav-pc {
@@ -698,44 +743,6 @@ footer {
         font-weight: 700;
     }
 
-    /* Carousel */
-    .text-overlay {
-        position: absolute;
-        top: 50%;
-        max-width: 70%;
-        padding: 12px;
-        border-radius: 8px;
-        z-index: 2;
-        transform: translateY(-50%);
-    }
-
-    .text-overlay.left {
-        left: 20px;
-        text-align: left;
-        transform: translateY(-50%);
-    }
-
-    .text-overlay.right {
-        right: 20px;
-        text-align: right;
-        transform: translateY(-50%);
-    }
-
-    .text-overlay h1 {
-        font-size: 1.3rem;
-        margin-bottom: 8px;
-    }
-
-    .text-overlay p {
-        font-size: 0.95rem;
-        margin-bottom: 8px;
-    }
-
-    .text-overlay button {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-
     /* Cards */
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -752,7 +759,34 @@ footer {
 
     footer {
         padding-bottom: 20px;
+        text-align: center;
     }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-brand,
+    .footer-socials {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: none;
+    }
+
 
     #backToTop {
         width: 40px;
@@ -764,21 +798,41 @@ footer {
 }
 
 @media (max-width: 480px) {
-
     /* Header */
-    header {
-        padding: 20px 12px;
+    header .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        min-height: 70px;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        order: 1;
+        flex: 0 0 80px;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .logo img {
         width: 55px;
         height: 55px;
+        display: block;
     }
 
     header h1 {
-        font-size: 1rem;
+        order: 2;
+        font-size: 1.1rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        flex: 1;
+        text-align: center;
         margin: 0;
+        padding: 0 5px;
+        width: auto;
+        max-width: 60%;
     }
 
     /* Intro Message */
@@ -786,20 +840,15 @@ footer {
         display: block;
         text-align: center;
         margin: 20px 10px;
-
         padding: 25px 15px;
         background-color: #1e293B;
         border-radius: 12px;
-
         border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .mobile-intro .tagline {
         font-size: 0.95rem;
         font-weight: 700;
-        /*white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;*/
         margin-bottom: 8px;
         color: #2CB7C9;
     }
@@ -820,7 +869,16 @@ footer {
 
     /* BURGER */
     .burger-menu {
-        font-size: 22px;
+        order: 3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 0 0 60px;
+        cursor: pointer;
+        font-size: 28px;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-pc {
@@ -936,5 +994,38 @@ footer {
         font-size: 0.9rem;
         bottom: 100px;
         right: 40px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-brand,
+    .footer-socials {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer-socials p {
+        margin-bottom: 10px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .social-icons a {
+        display: inline-block;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
     }
 }

@@ -13,20 +13,22 @@
 <body>
     <!--Header-->
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo/Logo.webp" alt="Logo">
-            </a>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/Logo.webp" alt="Logo">
+                </a>
+            </div>
+                <h1>Punto BAT 3D</h1>
+            <nav class="nav-pc">
+                <ul>
+                    <li><a href="#section1">Mates</a></li>
+                    <li><a href="#section2">Llaveros</a></li>
+                    <li><a href="#section3">Adornos</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">☰</div>
         </div>
-        <h1>Punto BAT 3D</h1>
-        <nav class="nav-pc">
-            <ul>
-                <li><a href="#section1">Mates</a></li>
-                <li><a href="#section2">Llaveros</a></li>
-                <li><a href="#section3">Adornos</a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu">☰</div>
     </header>
 
     <nav class="mobile-nav">
@@ -37,7 +39,7 @@
         </ul>
     </nav>
 
-    <div class="mobile-intro">
+    <div class="mobile-intro container">
         <p class="tagline">Personalizamos ideas. Fabricamos proyectos.</p>
         <p class="subtitle">Creamos productos únicos a pedido.</p>
     </div>
@@ -45,22 +47,16 @@
     <!--Hero Carousel-->
     <section id="hero" class="carousel">
         <div class="slide active">
-            <img src="" alt="Hero placeholder">
-            <div class="text-overlay left">
-                <p>Personalizamos ideas</p>
-            </div>
+            <!--img src="" alt="Hero placeholder"-->
+            <p class="slide-text">Personalizamos ideas</p>
         </div>
         <div class="slide">
-            <img src="" alt="Hero placeholder">
-            <div class="text-overlay right">
-                <p>Diseñamos tus proyectos</p>
-            </div>
+            <!--img src="" alt="Hero placeholder"-->
+            <p class="slide-text">Diseñamos tus proyectos</p>
         </div>
         <div class="slide">
-            <img src="" alt="Hero placeholder">
-            <div class="text-overlay right">
-                <p>Ventas por mayor</p>
-            </div>
+            <!--img src="" alt="Hero placeholder"-->
+            <p class="slide-text">Ventas por mayor</p>
         </div>
         <div class="carousel-dots">
             <span class="dot active"></span>
@@ -69,23 +65,31 @@
         </div>
     </section>
 
-    <h2 class="products-title">Nuestro Catálogo</h2>
+    <div class="container">
+        <h2 class="products-title">Nuestro Catálogo</h2>
+    </div>
 
     <!--Product Sections-->
     <main>
         <section id="section1">
-            <h2>Mates</h2>
-            <div class="card-grid"></div>
+            <div class="container">
+                <h2>Mates</h2>
+                <div class="card-grid"></div>
+            </div>
         </section>
 
         <section id="section2">
-            <h2>Llaveros</h2>
-            <div class="card-grid"></div>
+            <div class="container">
+                <h2>Llaveros</h2>
+                <div class="card-grid"></div>
+            </div>
         </section>
 
         <section id="section3">
-            <h2>Adornos y Accesorios</h2>
-            <div class="card-grid"></div>
+            <div class="container">
+                <h2>Adornos y Accesorios</h2>
+                <div class="card-grid"></div>
+            </div>
         </section>
 
         <div class="modal">
@@ -103,14 +107,28 @@
 
     <!--Footer-->
     <footer id="footer">
-        <div class="socials">
-            <p>Seguinos en:</p>
-            <a href="https://www.facebook.com/puntobatar" target="_blank" rel="noopener noreferrer"><img
-                    src="images/socials/facebook.svg" alt="Facebook" class="social-icon"></a>
-            <a href="https://www.instagram.com/puntobat_3d" target="_blank" rel="noopener noreferrer"><img
-                    src="images/socials/instagram.svg" alt="Instagram" class="social-icon"></a>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Punto BAT</h3>
+                    <p>Diseño e impresión 3D personalizada</p>
+                </div>
+
+                <div class="footer-socials">
+                    <p>Seguinos en:</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/puntobatar" target="_blank" rel="noopener noreferrer"><img
+                                src="images/socials/facebook.svg" alt="Facebook" class="social-icon"></a>
+                        <a href="https://www.instagram.com/puntobat_3d" target="_blank" rel="noopener noreferrer"><img
+                                src="images/socials/instagram.svg" alt="Instagram" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Punto BAT 3D · Todos los derechos reservados</p>
+            </div>
         </div>
-        <p>&copy;<span id="year"></span> Punto BAT </p>
     </footer>
 
     <button id="backToTop" title="Volver arriba">↑</button>
@@ -118,9 +136,10 @@
     <!--Preview User Cart-->
     <div id="previewModal" class="modal">
         <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">×</button>
             <h3>Tu Consulta</h3>
             <ul id="selectedList"></ul>
-            <button>Enviar por WhatsApp</button>
+            <button id="sendWhatsappBtn">Enviar por WhatsApp</button>
         </div>
     </div>
 
