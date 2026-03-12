@@ -25,12 +25,22 @@ function renderCatalog(products) {
             wrapper.dataset.product = product.name;
 
             wrapper.innerHTML = `
-            <img src="${product.image}" alt="${product.alt}">
-            <div class="card-info">
-                <h3>${product.name}</h3>
-                <button class="view-detail" data-product="${product.id}">Ver detalle</button>
-            </div>
+            <div class="card-image-wrapper">
+        <img src="${product.image}" alt="${product.alt}" loading="lazy">
+    </div>
+    <div class="card-info">
+        <h3>${product.name}</h3>
+        <span class="view-detail-link" data-product="${product.id}">VER DETALLE</span>
+    </div>
             `;
+
+            wrapper.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('view-detail-link')) {
+                    const detailLink = wrapper.querySelector('.view-detail-link');
+                    if (detailLink) detailLink.click();
+                }
+
+            });
 
             fragment.appendChild(wrapper);
         });
@@ -46,7 +56,7 @@ const modalPrice = document.getElementById('modal-price');
 const modalDesc = document.getElementById('modal-desc');
 
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('view-detail')) {
+    if (e.target.classList.contains('view-detail-link')) {
         const productId = e.target.dataset.product;
         const card = e.target.closest('.card');
 
@@ -59,24 +69,39 @@ document.addEventListener('click', (e) => {
                     modalPrice.textContent = `$${product.price} ${product.currency}`;
                     modalDesc.textContent = product.description;
 
+                    let modalImg = modal.querySelector('.modal-image');
+                    if (!modalImg) {
+                        modalImg = document.createElement('img');
+                        modalImg.className = 'modal-image';
+                        modal.querySelector('.modal-content').prepend(modalImg);
+                    }
+                    modalImg.src = product.image;
+
                     let modalButton = document.getElementById('modal-action');
                     if (!modalButton) {
                         modalButton = document.createElement('button');
                         modalButton.id = 'modal-action';
                         modalButton.style.marginTop = '15px';
                         modalButton.addEventListener('click', (ev) => toggleSelection(ev, modalButton));
-                        modal.querySelector('.modal-content').appendChild(modalButton);
+
+                        const infoContainer = modal.querySelector('.modal-info-container');
+                        if (infoContainer) {
+                            infoContainer.appendChild(modalButton);
+                        }
                     }
 
                     modalButton.closestCard = card;
 
                     if (card.classList.contains('selected')) {
                         modalButton.textContent = 'Quitar de consulta';
+                        modalButton.classList.add('quitar');
                     } else {
                         modalButton.textContent = 'Agregar a consulta';
+                        modalButton.classList.remove('quitar');
                     }
 
                     modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
                 }
             });
     }
@@ -87,12 +112,27 @@ const whatsappButton = document.getElementById('whatsapp-button');
 
 function updateWhatsappState() {
     const whatsappButton = document.getElementById('whatsapp-button');
+    const countSpan = document.getElementById('whatsapp-count');
+
     if (!whatsappButton) return;
 
-    if (selectedProducts.size > 0) {
+    const count = window.selectedProducts.size;
+
+    if (count > 0) {
         whatsappButton.classList.add('active');
+        whatsappButton.setAttribute('data-count', count);
+
+        if (countSpan) {
+            countSpan.textContent = count;
+            countSpan.style.display = 'flex';
+        }
     } else {
         whatsappButton.classList.remove('active');
+        whatsappButton.removeAttribute('data-count');
+
+        if (countSpan) {
+            countSpan.style.display = 'none';
+        }
     }
 }
 
@@ -102,41 +142,40 @@ function toggleSelection(event, btn) {
     const card = btn.closestCard || btn.closest('.card');
     const product = card.dataset.product;
 
-    if (selectedProducts.has(product)) {
-        selectedProducts.delete(product);
+    if (window.selectedProducts.has(product)) {
+        window.selectedProducts.delete(product);
         card.classList.remove('selected');
         btn.textContent = 'Agregar a consulta';
+        btn.classList.remove('quitar');
     } else {
-        selectedProducts.add(product);
+        window.selectedProducts.add(product);
         card.classList.add('selected');
         btn.textContent = 'Quitar de consulta';
-    }
-
-    if (btn.id === 'modal-action') {
-        if (card.classList.contains('selected')) {
-            btn.textContent = 'Quitar de consulta';
-        } else {
-            btn.textContent = 'Agregar a consulta';
-        }
+        btn.classList.add('quitar');
     }
 
     updateWhatsappState();
 }
 
-modal.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
-});
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 
-//ESC Key Modal Closer
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-        modal.style.display = 'none';
-    }
-});
+    //ESC Key Modal Closer
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 
-// X Modal Closer
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-close')) {
-        modal.style.display = 'none';
-    }
-});
+    // X Modal Closer
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-close')) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });

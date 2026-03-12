@@ -120,3 +120,22 @@ backToTopBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// Close Burger Menu Clicking Outside
+document.addEventListener('click', (e) => {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const burger = document.querySelector('.burger-menu');
+
+    if (mobileNav.style.display === 'flex' &&
+        !mobileNav.contains(e.target) &&
+        !burger.contains(e.target)) {
+        mobileNav.style.display = 'none';
+    }
+});
+
+//Close Burger Menu on Link Click
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.mobile-nav').style.display = 'none';
+    });
+});
