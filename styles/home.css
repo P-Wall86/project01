@@ -366,7 +366,7 @@ section h2::after {
 
 /* WHATSAPP INQUIRIES*/
 #whatsapp-button {
-    position: fixed;
+    position: fixed !important;
     bottom: 20px;
     right: 20px;
     background-color: #2CB7C9;
@@ -375,12 +375,13 @@ section h2::after {
     padding: 10px 15px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 9999 !important;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    transform: none !important;
 }
 
 #whatsapp-button:hover {
@@ -1217,6 +1218,10 @@ footer {
         margin: 0;
         line-height: 1.2;
     }
+
+    .card.selected::after {
+    bottom: -4px;
+}
 
     .view-detail-link {
         font-size: 0.55rem;
