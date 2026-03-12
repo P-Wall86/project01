@@ -1058,48 +1058,6 @@ footer {
     }
 }
 
-/* Query Test */
-@media (max-width: 500px) {
-    .mobile-intro {
-        margin: 10px 8px !important;
-        padding: 15px 12px !important;
-        width: calc(100% - 16px) !important;
-        box-sizing: border-box !important;
-    }
-    
-    .card-grid {
-        gap: 8px 6px !important;
-        padding: 0 5px !important;
-    }
-    
-    .card-info {
-        gap: 2px !important;
-    }
-    
-    .card-info h3 {
-        font-size: 0.65rem !important;
-        white-space: normal !important;
-        line-height: 1.2 !important;
-    }
-    
-    .view-detail-link {
-        font-size: 0.5rem !important;
-    }
-    
-    .card.selected::after {
-        bottom: -2px !important;
-    }
-    
-    #whatsapp-button {
-        bottom: 15px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 1.8rem !important;
-        padding: 0 !important;
-    }
-}
-
 @media (max-width: 480px) {
     /* Header */
     .nav-pc,
